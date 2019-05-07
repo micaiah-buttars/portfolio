@@ -84,22 +84,28 @@ class HomeIndex extends React.Component {
                         <title>{siteTitle}</title>
                         <meta name="description" content={siteDescription} />
                 </Helmet>
+                    <div className='desk'>
+
+                    </div>
 
                 <div id="main">
 
                     <section id="one">
                         <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
+                            <h2>About the Developer</h2>
                         </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-                        <ul className="actions">
+                        <p> I'm Micaiah Buttars, a Web Developer and UX Designer from Salt Lake City, Utah,<br/>
+                            currently based out of Lehi.<br/>
+                        <br/>
+                            I started in UX and moved towards development after realizing that coding was more in my wheelhouse.<br/>
+                            My biggest regret in life is that none of my friends are musically inclined enough to start a video game cover band as a hobby.</p>
+                        {/* <ul className="actions">
                             <li><a href="#" className="button">Learn More</a></li>
-                        </ul>
+                        </ul> */}
                     </section>
 
                     <section id="two">
-                        <h2>Recent Work</h2>
+                        <h2>Recent Projects</h2>
 
                         <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
                             src,
@@ -115,7 +121,7 @@ class HomeIndex extends React.Component {
 
                     <section id="three">
                         <h2>Get In Touch</h2>
-                        <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+                        <p>Please feel free to contact me with any comments or inquiries.</p>
                         <div className="row">
                             <div className="8u 12u$(small)">
                                 <form method="post" action="#">
