@@ -84,15 +84,15 @@ class HomeIndex extends React.Component {
                         <title>{siteTitle}</title>
                         <meta name="description" content={siteDescription} />
                 </Helmet>
-                    <div className='desk'>
+                    {/* <div className='desk'>
 
-                    </div>
+                    </div> */}
 
                 <div id="main">
 
                     <section id="one">
                         <header className="major">
-                            <h2>About the Developer</h2>
+                            <h2>Micaiah Buttars - Portfolio</h2>
                         </header>
                         <p> I'm Micaiah Buttars, a Web Developer and UX Designer from Salt Lake City, Utah,<br/>
                             currently based out of Lehi.<br/>
@@ -121,7 +121,7 @@ class HomeIndex extends React.Component {
 
                     <section id="three">
                         <h2>Get In Touch</h2>
-                        <p>Please feel free to contact me with any comments or inquiries.</p>
+                        <p>Please feel free to reach out. My resume is available upon request.</p>
                         <div className="row">
                             <div className="8u 12u$(small)">
                                 <form method="post" action="#">
