@@ -84,11 +84,29 @@ class HomeIndex extends React.Component {
                         <title>{siteTitle}</title>
                         <meta name="description" content={siteDescription} />
                 </Helmet>
-                    {/* <div className='desk'>
-
-                    </div> */}
+                    <div class='planets'>
+                        <div class='solar-syst'>
+                            <div class='sun'></div>
+                            <div class='mercury-line'></div>
+                            <div class='mercury'></div>
+                            <div class='venus'></div>
+                            <div class='earth'></div> 
+                            <div class='mars'></div>
+                            <div class='jupiter-inner'></div>
+                            <div class='jupiter-outer'></div>
+                            <div class='jupiter'></div>
+                            <div class='saturn'></div>
+                            <div class='uranus'></div>
+                            <div class='neptune-line'></div>
+                            <div class='neptune'></div>
+                        </div>
+                    </div>
 
                 <div id="main">
+
+
+                    
+                
 
                     <section id="one">
                         <header className="major">

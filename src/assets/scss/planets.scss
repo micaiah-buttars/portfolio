@@ -1,0 +1,275 @@
+@function revolution($orbital-year){
+  @return $orbital-year * 30 / 365.2563 + s
+}
+// final should be 30s
+
+$sun: 45px;
+$mercury-orbit : 210px; $mercury: 12px; 
+$venus-orbit : 254px; $venus: 18px; 
+$earth-orbit : 470px; $earth: 18px; 
+$mars-orbit : 570px; $mars: 18px;
+$jupiter-orbit : 1020px; $jupiter: 30px; 
+$saturn-orbit : 1290px; $saturn: 24px;
+$uranus-orbit : 1380px; $uranus: 24px;
+$neptune-orbit : 1740px; $neptune: 24px;
+
+$mercury-line: 216px;
+
+$jupiter-inner: 1012px;
+$jupiter-outer: 1028px;
+
+$neptune-line: 1750px;
+
+
+
+*, *:before, *:after{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+.planets{
+    position: absolute;
+    margin-top: -5em;
+    padding-top: 10em;
+    padding-left: 70em;
+    padding-bottom: 60em;
+    margin-bottom: 35em;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    z-index: -9000;
+    
+}
+
+.solar-syst{
+  &:after{
+    content:"";
+    position:absolute;
+    height:2px;
+    width:2px;
+    top:-2px;
+    background:white;
+
+    border-radius:100px;
+  }
+  width:100%;
+  height:100%;
+  position:relative;
+  div{
+    border-radius:1000px;
+    top:50%;
+    left:50%;
+    position:absolute;
+    z-index:999;
+    &:not(.sun){
+      border: 1px solid #ebebeb;
+      &:before{
+        left:50%;
+        border-radius:100px;
+        content:"";
+        position:absolute;
+      }
+    }
+
+  }
+}
+
+.sun{
+  background:#ebebeb;
+  height:$sun;
+  width:$sun;
+  margin-top: -$sun / 2;
+  margin-left: -$sun / 2;
+  background-clip: padding-box;
+  border:0 !important;
+  background-position: -28px -103px;
+  background-size: 175%;
+}
+
+.mercury{
+  height: $mercury-orbit;
+  width: $mercury-orbit;
+  margin-top: -$mercury-orbit / 2;
+  margin-left: -$mercury-orbit / 2;
+  animation: orb revolution(87.5) linear infinite;
+  &:before{
+    height:$mercury;
+    width:$mercury;
+    background: #ebebeb;
+    margin-top: (-$mercury / 2) - 2;
+    margin-left: (-$mercury / 2) - 3;
+  }
+}
+.mercury-line{
+    width: $mercury-line;
+    height: $mercury-line;
+    margin-top: -$mercury-line / 2;
+    margin-left: -$mercury-line / 2;
+}
+
+.venus{
+  height: $venus-orbit;
+  width: $venus-orbit;
+  margin-top: -$venus-orbit / 2;
+  margin-left: -$venus-orbit / 2;
+  animation: orb revolution(224.7) linear infinite reverse;
+  &:before{
+    height:$venus;
+    width:$venus;
+    background:#ebebeb;
+    margin-top: -$venus / 2;
+    margin-left: -$venus / 2;
+  }
+}
+
+.earth{
+  height: $earth-orbit;
+  width: $earth-orbit;
+  margin-top: -$earth-orbit / 2;
+  margin-left: -$earth-orbit / 2;
+  animation: orb revolution(365.2563) linear infinite;
+  &:before{
+    height:$earth;
+    width:$earth;
+    background:#ebebeb;
+    margin-top: -$earth / 2;
+    margin-left: -$earth / 2;
+  }
+}
+.mars{
+  height: $mars-orbit;
+  width: $mars-orbit;
+  margin-top: -$mars-orbit / 2;
+  margin-left: -$mars-orbit / 2;
+  animation: orb revolution(687) linear infinite;
+  animation-delay: -20s;
+
+  &:before{
+    height:$mars;
+    width:$mars;
+    background:#ebebeb;
+    margin-top: -$mars / 2;
+    margin-left: -$mars / 2;
+  }
+}
+
+.jupiter{
+  height: $jupiter-orbit;
+  width: $jupiter-orbit;
+  margin-top: -$jupiter-orbit / 2;
+  margin-left: -$jupiter-orbit / 2;
+  animation: orb revolution(4331) linear infinite;
+  animation-delay: -80s;
+  &:before{
+    height:$jupiter;
+    width:$jupiter;
+    background:#ebebeb;
+    margin-top: -$jupiter / 2;
+    margin-left: -$jupiter / 2;
+  }
+}
+.jupiter-inner{
+    width: $jupiter-inner;
+    height: $jupiter-inner;
+    margin-top: -$jupiter-inner / 2;
+    margin-left: -$jupiter-inner / 2;
+}
+.jupiter-outer{
+    width: $jupiter-outer;
+    height: $jupiter-outer;
+    margin-top: -$jupiter-outer / 2;
+    margin-left: -$jupiter-outer / 2;
+}
+
+
+
+
+
+.saturn{
+  height: $saturn-orbit;
+  width: $saturn-orbit;
+  margin-top: -$saturn-orbit / 2;
+  margin-left: -$saturn-orbit / 2;
+  animation: orb revolution(7470) linear infinite;
+  animation-delay: -130s;
+
+  &:before{
+    height:$saturn;
+    width:$saturn;
+    background:#ebebeb;
+    margin-top: -$saturn / 2;
+    margin-left: -$saturn / 2;
+  }
+  &:after{
+    position: absolute;
+    content: "";
+    height: 16px *3;
+    width: 16px *3;
+    left: 50%;
+    top: 0px;
+    margin-left: -8px *3;
+    margin-top: -8px *3;
+    border-radius: 100px;
+    border: 1px solid #ebebeb;
+  }
+
+}
+
+.uranus{
+  height: $uranus-orbit;
+  width: $uranus-orbit;
+  margin-top: -$uranus-orbit / 2;
+  margin-left: -$uranus-orbit / 2;
+  animation: orb revolution(3058) linear infinite reverse;
+  animation-delay: -100s;
+
+  &:before{
+    height:$uranus;
+    width:$uranus;
+    background:#ebebeb;
+    margin-top: -$uranus / 2;
+    margin-left: -$uranus / 2;
+  }
+}
+
+.neptune{
+  height: $neptune-orbit;
+  width: $neptune-orbit;
+  margin-top: -$neptune-orbit / 2;
+  margin-left: -$neptune-orbit / 2;
+  animation: orb revolution(5980) linear infinite;
+  animation-delay: -100s;
+
+  &:before{
+    height:$neptune;
+    width:$neptune;
+    background:#ebebeb;
+    margin-top: (-$neptune / 2) - 3;
+    margin-left: (-$neptune / 2);
+  }
+}
+.neptune-line{
+    width: $neptune-line;
+    height: $neptune-line;
+    margin-top: -$neptune-line / 2;
+    margin-left: -$neptune-line / 2;
+    border: #ebebeb;
+}
+.hide{
+  display:none;
+}
+.links{
+  margin-top:5px !important;
+  font-size:1em !important;
+}
+
+@keyframes orb{
+  from {
+    transform:rotate(0deg)
+  }
+  to{
+    transform:rotate(-360deg)
+  }
+}

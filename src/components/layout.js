@@ -1,5 +1,7 @@
 import React from 'react'
 import '../assets/scss/main.scss'
+import '../assets/scss/planets.scss'
+
 
 import Header from './Header'
 
