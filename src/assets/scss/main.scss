@@ -997,10 +997,10 @@
 	#main {
 		margin-left: $size-header-width * 1.5;
 		max-width: 50em + $size-header-pad;
-		padding: $size-header-pad $size-header-pad $size-header-pad $size-header-pad;
+		padding: $size-header-pad;
 
 		width: calc(100% - #{$size-header-width});
-		// background: rgba(255,255,255,.5);
+		// background: rgba(0,0,0,.05);
 
 		> section {
 			border-top: solid 2px _palette(border);
@@ -1009,6 +1009,9 @@
 			padding: $size-header-pad 0 0 0;
 
 			&:first-child {
+				display: flex;
+				align-items: center;
+				height: 70vh;
 				border-top: 0;
 				margin-top: 0;
 				padding-top: 0;

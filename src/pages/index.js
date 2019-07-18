@@ -84,21 +84,21 @@ class HomeIndex extends React.Component {
                         <title>{siteTitle}</title>
                         <meta name="description" content={siteDescription} />
                 </Helmet>
-                    <div class='planets'>
-                        <div class='solar-syst'>
-                            <div class='sun'></div>
-                            <div class='mercury-line'></div>
-                            <div class='mercury'></div>
-                            <div class='venus'></div>
-                            <div class='earth'></div> 
-                            <div class='mars'></div>
-                            <div class='jupiter-inner'></div>
-                            <div class='jupiter-outer'></div>
-                            <div class='jupiter'></div>
-                            <div class='saturn'></div>
-                            <div class='uranus'></div>
-                            <div class='neptune-line'></div>
-                            <div class='neptune'></div>
+                    <div className='planets'>
+                        <div className='solar-syst'>
+                            <div className='sun'></div>
+                            <div className='mercury-line'></div>
+                            <div className='mercury'></div>
+                            <div className='venus'></div>
+                            <div className='earth'></div> 
+                            <div className='mars'></div>
+                            <div className='jupiter-inner'></div>
+                            <div className='jupiter-outer'></div>
+                            <div className='jupiter'></div>
+                            <div className='saturn'></div>
+                            <div className='uranus'></div>
+                            <div className='neptune-line'></div>
+                            <div className='neptune'></div>
                         </div>
                     </div>
 
@@ -110,13 +110,17 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Micaiah Buttars - Portfolio</h2>
+                            {/* <h2>Micaiah Buttars</h2> */}
                         </header>
-                        <p> I'm Micaiah Buttars, a Web Developer and UX Designer from Salt Lake City, Utah,<br/>
-                            currently based out of Lehi.<br/>
-                        <br/>
-                            I started in UX and moved towards development after realizing that coding was more in my wheelhouse.<br/>
-                            My biggest regret in life is that none of my friends are musically inclined enough to start a video game cover band as a hobby.</p>
+                        <p> 
+                        I'm <strong>Micaiah Buttars</strong>, a Web Developer and UX Designer from Salt Lake City, Utah.
+                            <br/><br/><br/>
+                        My long-standing appreciation of design and interest in human psychology is what initially led me to pursue UX Design, which then sparked a desire to know how to build out and code the designs I made.
+                            <br/><br/><br/>
+                        As a culmination of my interests in art, music, video games, and my knack for foolheartedly trying to make <br/>
+                        creative endeavours into realities; I’m currently in the process of teaching myself C++ to make a video game from scratch.
+                            
+                            </p>
                         {/* <ul className="actions">
                             <li><a href="#" className="button">Learn More</a></li>
                         </ul> */}
