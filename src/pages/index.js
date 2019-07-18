@@ -113,17 +113,14 @@ class HomeIndex extends React.Component {
                             {/* <h2>Micaiah Buttars</h2> */}
                         </header>
                         <p> 
-                        I'm <strong>Micaiah Buttars</strong>, a Web Developer and UX Designer from Salt Lake City, Utah.
-                            <br/><br/><br/>
+                        <h2 className='my-name'>I'm <span>Micaiah Buttars</span>,</h2>
+                        a Web Developer and UX Designer from Salt Lake City, Utah.
+                            <br/><br/>
                         My long-standing appreciation of design and interest in human psychology is what initially led me to pursue UX Design, which then sparked a desire to know how to build out and code the designs I made.
-                            <br/><br/><br/>
+                            <br/><br/>
                         As a culmination of my interests in art, music, video games, and my knack for foolheartedly trying to make <br/>
-                        creative endeavours into realities; I’m currently in the process of teaching myself C++ to make a video game from scratch.
-                            
-                            </p>
-                        {/* <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
-                        </ul> */}
+                        creative endeavours into realities; I’m currently in the process of teaching myself C++ to make a video game from scratch.     
+                        </p>
                     </section>
 
                     <section id="two">
