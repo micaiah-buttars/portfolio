@@ -2,78 +2,11 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
-// import Lightbox from 'react-images'
-import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
-
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
-
-const DEFAULT_IMAGES = [
-    { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', src: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', src: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', src: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', src: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', src: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
-];
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSketch, faCss3Alt, faReact, faNodeJs} from '@fortawesome/free-brands-svg-icons'
 
 class HomeIndex extends React.Component {
-
-    constructor() {
-        super();
-
-        this.state = {
-            lightboxIsOpen: false,
-            currentImage: 0,
-        };
-
-        this.closeLightbox = this.closeLightbox.bind(this);
-        this.gotoNext = this.gotoNext.bind(this);
-        this.gotoPrevious = this.gotoPrevious.bind(this);
-        this.openLightbox = this.openLightbox.bind(this);
-        this.handleClickImage = this.handleClickImage.bind(this);
-    }
-
-    openLightbox (index, event) {
-        event.preventDefault();
-        this.setState({
-            currentImage: index,
-            lightboxIsOpen: true,
-        });
-    }
-    closeLightbox () {
-        this.setState({
-            currentImage: 0,
-            lightboxIsOpen: false,
-        });
-    }
-    gotoPrevious () {
-        this.setState({
-            currentImage: this.state.currentImage - 1,
-        });
-    }
-    gotoNext () {
-        this.setState({
-            currentImage: this.state.currentImage + 1,
-        });
-    }
-    handleClickImage () {
-        if (this.state.currentImage === this.props.images.length - 1) return;
-
-        this.gotoNext();
-    }
-
     render() {
         const siteTitle = "Micaiah Buttars - Portfolio"
         const siteDescription = "Site description"
@@ -103,14 +36,8 @@ class HomeIndex extends React.Component {
                     </div>
 
                 <div id="main">
-
-
-                    
-                
-
                     <section id="one">
                         <header className="major">
-                            {/* <h2>Micaiah Buttars</h2> */}
                         </header>
                         <p> 
                         <h2 className='my-name'>I'm <span>Micaiah Buttars</span>,</h2>
@@ -118,7 +45,7 @@ class HomeIndex extends React.Component {
                             <br/><br/>
                         My long-standing appreciation of design and interest in human psychology is what initially led me to pursue UX Design, which then sparked a desire to know how to build out and code the designs I made.
                             <br/><br/>
-                        As a culmination of my interests in art, music, video games, and my knack for foolheartedly trying to make <br/>
+                        As a culmination of my interests in art, music, video games, and my knack for trying to make <br/>
                         creative endeavours into realities; I’m currently in the process of teaching myself C++ to make a video game from scratch.     
                         </p>
                     </section>
@@ -126,54 +53,77 @@ class HomeIndex extends React.Component {
                     <section id="two">
                         <h2>Recent Projects</h2>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
-                            src,
-                            thumbnail,
-                            caption,
-                            description
-                        }))} />
+                        <div className='project'>
+                            <h1>Airbnb Clone</h1>
+                            <span>May 2019 |</span>
+                            <span>Web Development |</span>
+                            <label><FontAwesomeIcon icon={faReact}/> React</label>
+                            <label><FontAwesomeIcon icon={faCss3Alt}/> CSS</label>
+                            <label><FontAwesomeIcon icon={faSketch}/> Sketch</label>
+                            <br/><br/>
+                            <p>
+                                <span>Hosted project can be found <a href='http://138.68.247.136:4444/#/' target='_blank' rel="noopener noreferrer">here</a>.</span>
+                                <br/>
+                                Alongside Lauren Irish and Spencer Vorhees, my classmates at DevMountain,
+                                <br/>
+                                we faithfully recreated Airbnb's desktop website to demonstrate our abilities as full stack developers
+                                by using a blend of outside technologies &mdash; such as react-image-lightbox, and Airbnb's own react-dates &mdash;
+                                as well as our own homebrewed functionalities, such as the on-hover effects of the listing view images.
+                            </p>
+                        </div>
+                            <br/>
+                        <div className='project'>
+                            <h1>OnTarget</h1>
+                            <span>April 2019 &mdash; Present |</span>
+                            <span>Web Development |</span>
+                            <label><FontAwesomeIcon icon={faReact}/> React</label>
+                            <label><FontAwesomeIcon icon={faCss3Alt}/> CSS</label>
+                            <label><FontAwesomeIcon icon={faNodeJs}/> NodeJs</label>
+                            <br/><br/>
+                            <p>
+                                <span>Hosted project can be found <a href='http://142.93.21.22:3557/#/' target='_blank' rel="noopener noreferrer">here</a>.</span>
+                                <br/>
+                                OnTarget began as a personal project at DevMountain intended to assess my skills
+                                with the basics of HTML, JavaScript, and React.
+                                It has moved beyond that assessment into a mobile responsive web app that I am fully developing.
+                                <br/>
+                                <br/>
+                                As the child of an educator who had a specific need, this project was designed to meet the needs of teachers that work with students with behavioral concerns.
+                                OnTarget seeks to streamline the paper/pencil data keeping process for teachers and paraprofessionals.
+                                By digitizing this process, valuable time is saved, and student behavioral data is immediately available at a teacher's fingertips.
+                                This allows educators to better assess the effectiveness of a student's behavior plan, and easily spot behavioral patterns in a given interval.
+                                <br/>
+                                <br/>
+                                OnTarget will be in beta testing at South Cache Middle School, Hyrum, UT during the 2019-20 school year.
+                            </p>
+                        </div>
 
-                        <ul className="actions">
+                        {/* <ul className="actions">
                             <li><a href="#" className="button">Full Portfolio</a></li>
-                        </ul>
+                        </ul> */}
+                    
                     </section>
 
                     <section id="three">
-                        <h2>Get In Touch</h2>
-                        <p>Please feel free to reach out. My resume is available upon request.</p>
+                        <h2 id='contact'>Get In Touch</h2>
+                        <p>Please feel free to reach out. I am more than happy to answer any project related questions or inquiries.</p>
                         <div className="row">
-                            <div className="8u 12u$(small)">
-                                <form method="post" action="#">
+                            <div >
+                                <form name='contact' method="post" data-netlify='true' netlify-honeypot='address'>
                                     <div className="row uniform 50%">
                                         <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
                                         <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
                                         <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                                        <div className="address-field"><input name="address" autocomplete="off"/></div>
                                     </div>
+                                    <ul className="actions">
+                                        <li><input type="submit" value="Send Message" /></li>
+                                    </ul>
                                 </form>
-                                <ul className="actions">
-                                    <li><input type="submit" value="Send Message" /></li>
-                                </ul>
-                            </div>
-                            <div className="4u 12u$(small)">
-                                <ul className="labeled-icons">
-                                    <li>
-                                        <h3 className="icon fa-home"><span className="label">Address</span></h3>
-                                        1234 Somewhere Rd.<br />
-                                        Nashville, TN 00000<br />
-                                        United States
-                                    </li>
-                                    <li>
-                                        <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-                                        000-000-0000
-                                    </li>
-                                    <li>
-                                        <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        <a href="#">hello@untitled.tld</a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </section>
+                    
 
                 </div>
 

@@ -251,6 +251,11 @@
 
 /* Form */
 
+	.address-field{
+		visibility: hidden;
+	}
+
+
 	form {
 		margin: 0 0 _size(element-margin) 0;
 	}
@@ -616,6 +621,8 @@
 		}
 
 		&.actions {
+			margin-top: -1.5em;
+			position: absolute;
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
@@ -1021,6 +1028,25 @@
 	}
 
 /* Main */
+	html { scroll-behavior: smooth; }
+
+	.project{
+		> h1{
+			margin-bottom: 0;
+		}
+		> label, span {
+			display: inline-block;
+			color: _palette(fg-light);
+			margin: 0 .5em 0 0;
+
+		}
+		> p {
+			> span {
+				color: _palette(fg-bold)
+
+			}
+		}
+	}
 
 	#main {
 		margin-left: $size-header-width * 1.5;

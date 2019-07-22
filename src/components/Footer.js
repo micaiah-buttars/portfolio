@@ -13,7 +13,7 @@ class Footer extends React.Component {
                             <FontAwesomeIcon icon={faGithub} size='lg'/>
                             <span className="label">Github</span>
                         </a></li>
-                        <li><a href='https://github.com/micaiah-buttars' className='icon'>
+                        <li><a href='#contact' className='icon'>
                             <FontAwesomeIcon icon={faEnvelope} size='lg'/>
                             <span className="label">Email</span>
                         </a></li>
