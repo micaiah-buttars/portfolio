@@ -9,7 +9,7 @@ class Footer extends React.Component {
             <div id="footer">
                 <div className="inner">
                     <ul className="icons">
-                        <li><a href='https://github.com/micaiah-buttars' className='icon'>
+                        <li><a href='https://github.com/micaiah-buttars' className='icon' target='_blank' rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faGithub} size='lg'/>
                             <span className="label">Github</span>
                         </a></li>
