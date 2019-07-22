@@ -109,7 +109,7 @@ class HomeIndex extends React.Component {
                         <p>Please feel free to reach out. I am more than happy to answer any project related questions or inquiries.</p>
                         <div className="row">
                             <div >
-                                <form name='contact' method="post" data-netlify='true' netlify-honeypot='address'>
+                                <form name='contact' method="post" data-netlify='true' netlify-honeypot='address' netlify>
                                     <div className="row uniform 50%">
                                         <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
                                         <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
