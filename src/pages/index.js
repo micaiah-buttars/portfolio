@@ -3,6 +3,13 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 
+import airbnb1 from '../assets/images/fulls/airbnb1.png'
+import airbnb2 from '../assets/images/fulls/airbnb2.png'
+import airbnb3 from '../assets/images/fulls/airbnb3.png'
+import ontarget1 from '../assets/images/fulls/ontarget1.png'
+import ontarget2 from'../assets/images/fulls/ontarget2.png'
+import ontarget3 from '../assets/images/fulls/ontarget3.png'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSketch, faCss3Alt, faReact, faNodeJs} from '@fortawesome/free-brands-svg-icons'
 
@@ -70,6 +77,11 @@ class HomeIndex extends React.Component {
                                 by using a blend of outside technologies &mdash; such as react-image-lightbox, and Airbnb's own react-dates &mdash;
                                 as well as our own homebrewed functionalities, such as the on-hover effects of the listing view images.
                             </p>
+                            <div className='images-container'>
+                                <img src={airbnb1}/>
+                                <img src={airbnb2}/>
+                                <img src={airbnb3}/>
+                            </div>
                         </div>
                             <br/>
                         <div className='project'>
@@ -96,6 +108,11 @@ class HomeIndex extends React.Component {
                                 <br/>
                                 OnTarget will be in beta testing at South Cache Middle School, Hyrum, UT during the 2019-20 school year.
                             </p>
+                            <div className='images-container'>
+                                <img src={ontarget1}/>
+                                <img src={ontarget2}/>
+                                <img src={ontarget3}/>
+                            </div>
                         </div>
 
                         {/* <ul className="actions">
