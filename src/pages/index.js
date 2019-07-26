@@ -70,6 +70,7 @@ class HomeIndex extends React.Component {
                             <br/><br/>
                             <p>
                                 <span>Hosted project can be found <a href='http://138.68.247.136:4444/#/' target='_blank' rel="noopener noreferrer">here</a>.</span>
+                                <span>Github repo can be found <a href='https://github.com/devmountainairbnb/AirBnB-Clone' target='_blank' rel="noopener noreferrer">here</a>.</span>
                                 <br/>
                                 Alongside Lauren Irish and Spencer Vorhees, my classmates at DevMountain,
                                 <br/>
@@ -94,6 +95,7 @@ class HomeIndex extends React.Component {
                             <br/><br/>
                             <p>
                                 <span>Hosted project can be found <a href='http://142.93.21.22:3557/#/' target='_blank' rel="noopener noreferrer">here</a>.</span>
+                                <span>Github repo can be found <a href='https://github.com/micaiah-buttars/student-behavior-tracker' target='_blank' rel="noopener noreferrer">here</a>.</span>
                                 <br/>
                                 OnTarget began as a personal project at DevMountain intended to assess my skills
                                 with the basics of HTML, JavaScript, and React.
