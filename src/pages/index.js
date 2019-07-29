@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import planets from '../components/planets'
 
 import airbnb1 from '../assets/images/fulls/airbnb1.png'
 import airbnb2 from '../assets/images/fulls/airbnb2.png'
@@ -10,8 +11,8 @@ import ontarget1 from '../assets/images/fulls/ontarget1.png'
 import ontarget2 from'../assets/images/fulls/ontarget2.png'
 import ontarget3 from '../assets/images/fulls/ontarget3.png'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSketch, faCss3Alt, faReact, faNodeJs} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon as Icon}  from '@fortawesome/react-fontawesome'
+import { faSketch, faCss3Alt, faReact, faNodeJs, faJs, faHtml5} from '@fortawesome/free-brands-svg-icons'
 
 class HomeIndex extends React.Component {
     render() {
@@ -24,37 +25,48 @@ class HomeIndex extends React.Component {
                         <title>{siteTitle}</title>
                         <meta name="description" content={siteDescription} />
                 </Helmet>
-                    <div className='planets'>
-                        <div className='solar-syst'>
-                            <div className='sun'></div>
-                            <div className='mercury-line'></div>
-                            <div className='mercury'></div>
-                            <div className='venus'></div>
-                            <div className='earth'></div> 
-                            <div className='mars'></div>
-                            <div className='jupiter-inner'></div>
-                            <div className='jupiter-outer'></div>
-                            <div className='jupiter'></div>
-                            <div className='saturn'></div>
-                            <div className='uranus'></div>
-                            <div className='neptune-line'></div>
-                            <div className='neptune'></div>
-                        </div>
-                    </div>
-
+                {planets}
+                    
                 <div id="main">
                     <section id="one">
-                        <header className="major">
-                        </header>
                         <p> 
-                        <h2 className='my-name'>I'm <span>Micaiah Buttars</span>,</h2>
-                        a Web Developer and UX Designer from Salt Lake City, Utah.
-                            <br/><br/>
-                        My long-standing appreciation of design and interest in human psychology is what initially led me to pursue UX Design, which then sparked a desire to know how to build out and code the designs I made.
-                            <br/><br/>
-                        As a culmination of my interests in art, music, video games, and my knack for trying to make <br/>
-                        creative endeavours into realities; I’m currently in the process of teaching myself C++ to make a video game from scratch.     
+                            <h2 className='my-name'>I'm <span>Micaiah Buttars</span>,</h2>
+                            a Web Developer and UX Designer from Salt Lake City, Utah.
+                                <br/><br/>
+                            My long-standing appreciation of design and interest in human psychology is what initially led me to pursue UX Design, which then sparked a desire to know how to build out and code the designs I made.
+                                <br/><br/>
+                            As a culmination of my interests in art, music, video games, and my knack for trying to make <br/>
+                            creative endeavours into realities; I’m currently in the process of teaching myself C++ to make a video game from scratch.     
                         </p>
+                    </section>
+                    <section>
+                        <div className='fa-icons'>
+                                <div>
+                                    <Icon icon={faReact} size='lg'/>
+                                    <label>React</label>
+                                </div>
+                                <div>
+                                    <Icon icon={faCss3Alt} size='lg'/>
+                                    <label>CSS 3</label>
+                                </div>
+                                <div>
+                                    <Icon icon={faJs} size='lg'/>
+                                    <label>Javascript</label>
+                                </div>
+                                <div>
+                                    <Icon icon={faHtml5} size='lg'/>
+                                    <label>HTML 5</label>
+                                </div>
+                                <div>
+                                    <Icon icon={faSketch} size='lg'/>
+                                    <label>Sketch</label>
+                                </div>
+                                <div>
+                                    <Icon icon={faNodeJs} size='lg'/>
+                                    <label>NodeJS</label>
+                                </div>
+                        </div>
+
                     </section>
 
                     <section id="two">
@@ -64,9 +76,9 @@ class HomeIndex extends React.Component {
                             <h1>Airbnb Clone</h1>
                             <span>May 2019 |</span>
                             <span>Web Development |</span>
-                            <label><FontAwesomeIcon icon={faReact}/> React</label>
-                            <label><FontAwesomeIcon icon={faCss3Alt}/> CSS</label>
-                            <label><FontAwesomeIcon icon={faSketch}/> Sketch</label>
+                            <label><Icon icon={faReact}/> React</label>
+                            <label><Icon icon={faCss3Alt}/> CSS</label>
+                            <label><Icon icon={faSketch}/> Sketch</label>
                             <br/><br/>
                             <p>
                                 <span>Hosted project can be found <a href='http://138.68.247.136:4444/#/' target='_blank' rel="noopener noreferrer">here</a>.</span>
@@ -89,9 +101,9 @@ class HomeIndex extends React.Component {
                             <h1>OnTarget</h1>
                             <span>April 2019 &mdash; Present |</span>
                             <span>Web Development |</span>
-                            <label><FontAwesomeIcon icon={faReact}/> React</label>
-                            <label><FontAwesomeIcon icon={faCss3Alt}/> CSS</label>
-                            <label><FontAwesomeIcon icon={faNodeJs}/> NodeJs</label>
+                            <label><Icon icon={faReact}/> React</label>
+                            <label><Icon icon={faCss3Alt}/> CSS</label>
+                            <label><Icon icon={faNodeJs}/> NodeJs</label>
                             <br/><br/>
                             <p>
                                 <span>Hosted project can be found <a href='http://142.93.21.22:3557/#/' target='_blank' rel="noopener noreferrer">here</a>.</span>
